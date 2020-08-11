@@ -1,19 +1,19 @@
 import { iAction } from "../actions";
 
-type iFeature = {
+export type iFeature = {
   id: number;
   name: string;
   price: number;
 };
 
-type iCar = {
+export type iCar = {
   price: number;
   name: string;
   image: string;
   features: Array<iFeature>;
 };
 
-type iState = {
+export type iState = {
   additionalPrice: number;
   car: iCar;
   additionalFeatures: Array<iFeature>;
