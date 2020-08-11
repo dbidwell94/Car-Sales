@@ -47,6 +47,7 @@ export default function Reducer(state = initialState, action: iAction): iState {
           features: [...state.car.features, featureObj],
         },
       };
+
     case "REMOVE_FEATURE_FROM_CAR":
       featureObj = action.payload as iFeature;
       return {
@@ -58,6 +59,7 @@ export default function Reducer(state = initialState, action: iAction): iState {
           }),
         },
       };
+
     default:
       return state;
   }
