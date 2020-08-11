@@ -41,6 +41,7 @@
     "@types/react-redux": "^7.1.9",
     "@types/redux": "^3.6.0",
     "@types/styled-components": "^5.1.2",
-    "@types/uuid": "^8.0.1"
+    "@types/uuid": "^8.0.1",
+    "typescript": "^3.9.7"
   }
 }
