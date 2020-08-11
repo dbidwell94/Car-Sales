@@ -38,6 +38,8 @@ const initialState: iState = {
 
 export default function Reducer(state = initialState, action: iAction): iState {
   switch (action.type) {
+    case "ADD_NEW_FEATURE_TO_CAR":
+      return state;
     default:
       return state;
   }
