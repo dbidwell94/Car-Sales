@@ -39,7 +39,7 @@ const initialState: iState = {
 export default function Reducer(state = initialState, action: iAction): iState {
   switch (action.type) {
     case "ADD_NEW_FEATURE_TO_CAR":
-      let featureObj = action.payload as iFeature;
+      var featureObj = action.payload as iFeature;
       return {
         ...state,
         car: {
@@ -49,7 +49,7 @@ export default function Reducer(state = initialState, action: iAction): iState {
       };
 
     case "REMOVE_FEATURE_FROM_CAR":
-      featureObj = action.payload as iFeature;
+      var featureObj = action.payload as iFeature;
       return {
         ...state,
         car: {
