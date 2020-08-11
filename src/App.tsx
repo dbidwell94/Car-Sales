@@ -17,7 +17,7 @@ const App = (props: iAppProps) => {
   return (
     <div className="boxes">
       <div className="box">
-        <Header car={props.car} />
+        <Header />
         <AddedFeatures car={props.car} />
       </div>
       <div className="box">

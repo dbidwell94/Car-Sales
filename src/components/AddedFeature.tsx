@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { iFeature } from "../reducers";
+import { iFeature, iState } from "../reducers";
 import { removeFeatureFromCar, iAction } from "../actions";
 
 type iAddedFeatureProps = {
@@ -25,4 +25,8 @@ const AddedFeature = (props: iAddedFeatureProps) => {
   );
 };
 
-export default connect(() => {}, { removeFeatureFromCar })(AddedFeature);
+function mapStateToProps(state: iState) {
+  return {};
+}
+
+export default connect(mapStateToProps, { removeFeatureFromCar })(AddedFeature);

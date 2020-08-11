@@ -46,6 +46,10 @@ export default function Reducer(state = initialState, action: iAction): iState {
           ...state.car,
           features: [...state.car.features, featureObj],
         },
+        additionalPrice: state.additionalPrice + featureObj.price,
+        additionalFeatures: state.additionalFeatures.filter((feature) => {
+          return feature.id !== featureObj.id;
+        }),
       };
 
     case "REMOVE_FEATURE_FROM_CAR":
@@ -58,6 +62,8 @@ export default function Reducer(state = initialState, action: iAction): iState {
             return feature.id !== featureObj.id;
           }),
         },
+        additionalPrice: state.additionalPrice - featureObj.price,
+        additionalFeatures: [...state.additionalFeatures, featureObj],
       };
 
     default:

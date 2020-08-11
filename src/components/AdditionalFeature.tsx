@@ -1,7 +1,7 @@
 import React from "react";
 import { addNewFeatureToCar, iAction } from "../actions";
 import { connect } from "react-redux";
-import { iFeature } from "../reducers";
+import { iFeature, iState } from "../reducers";
 
 type iAdditionalFeatureProps = {
   addNewFeatureToCar(feature: iFeature): iAction;
@@ -25,4 +25,10 @@ const AdditionalFeature = (props: iAdditionalFeatureProps) => {
   );
 };
 
-export default connect(() => {}, { addNewFeatureToCar })(AdditionalFeature);
+function mapStateToProps(state: iState) {
+  return {};
+}
+
+export default connect(mapStateToProps, { addNewFeatureToCar })(
+  AdditionalFeature
+);
